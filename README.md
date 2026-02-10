@@ -69,7 +69,7 @@ python xc_namespace_lb_stats_updated.py \
 ## Example
 
 ```bash
-python xc_namespace_lb_stats_updated.py \
+python xc-count-lb-objects-by-label.py \
   --base_url https://acme.console.ves.volterra.io \
   --api_token ABC123 \
   --days 30 \
