@@ -280,13 +280,7 @@ def collect_lb_entries(
     else:
         for lb in tcp_lbs:
             label_value = extract_application_label(lb, label_key)
-            lb_name: Optional[str] = None
-            if isinstance(lb, dict):
-                lb_name = lb.get("name")
-                if not lb_name and isinstance(lb.get("metadata"), dict):
-                    lb_name = lb["metadata"].get("name")
-            if not lb_name or not isinstance(lb_name, str):
-                continue
+            lb_name = lb.get("name")
             # For TCP load balancers, feature flags and HTTP requests are not applicable
             row = {
                 "namespace": namespace,
