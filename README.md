@@ -125,5 +125,3 @@ This script is intended to provide operational visibility into:
 * Security feature adoption
 * Request volume by load balancer
 
-
-```
